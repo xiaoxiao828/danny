@@ -17,12 +17,13 @@
 <script type="text/javascript" src="js/functions.js"></script>
 <script language="javascript">
     var now=new Date();
-    $("#now_time").html("*"+now.year()+"-"+parseInt(now.month())+parseInt(1)+"-"+parseInt(now.day())+parseInt(1)+".")
+    $("#now_time").html("*"+now.year()+"-"+parseInt(now.month())+parseInt(1)+"-"+parseInt(now.day())+parseInt(1)+".");
+    playSound();
 </script>
 </head>
 
 <body>
-<bgsound src="http://mp3.haoduoge.com/music7/252221.mp3" loop="-1">
+<embed name="embedPlay" src="http://sc.111ttt.com/up/mp3/123645/78AB4962603BE81EFE387695A1F76819.mp3" autostart="true" hidden="true" loop="true"></embed>
 <div id="mainDiv">
 	<div id="content">
 		<div id="code">
@@ -68,7 +69,7 @@
 		</div>
 	</div>
 </div>
-
+</body>
 <script type="text/javascript">
 var offsetX = $("#loveHeart").width() / 2;
 var offsetY = $("#loveHeart").height() / 2 - 55;
@@ -102,6 +103,31 @@ if (!document.createElement('canvas').getContext) {
 	adjustCodePosition();
 	$("#code").typewriter();
 }
+function playSound()
+{
+    var borswer = window.navigator.userAgent.toLowerCase();
+    if ( borswer.indexOf( "ie" ) >= 0 )
+    {
+        //IE内核浏览器
+        var strEmbed = '<embed name="embedPlay" src="http://sc.111ttt.com/up/mp3/123645/78AB4962603BE81EFE387695A1F76819.mp3" autostart="true" hidden="true" loop="false"></embed>';
+        if ( $( "body" ).find( "embed" ).length <= 0 )
+            $( "body" ).append( strEmbed );
+        var embed = document.embedPlay;
+
+        //浏览器不支持 audion，则使用 embed 播放
+        embed.volume = 100;
+        embed.play();
+    } else
+    {
+        //非IE内核浏览器
+        var strAudio = "<audio id='audioPlay' src='http://sc.111ttt.com/up/mp3/123645/78AB4962603BE81EFE387695A1F76819.mp3' hidden='true'>";
+        if ( $( "body" ).find( "audio" ).length <= 0 )
+            $( "body" ).append( strAudio );
+        var audio = document.getElementById( "audioPlay" );
+
+        //浏览器支持 audion
+        audio.play();
+    }
+}
 </script>
-</body>
 </html>
