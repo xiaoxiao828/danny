@@ -26,8 +26,9 @@
 	<div id="content">
 		<div id="code">
 			<span class="comments">/**</span><br />
-			<span class="space"/><span class="comments">*2016—03-28,</span><br />
-			<span class="space"/><span class="comments" id="now_time">*2016—04-01.</span><br />
+            <span class="space"/><span class="comments">*decribe  Nice to meet you</span><br />
+            <span class="space"/><span class="comments">*version  1.0</span><br />
+			<span class="space"/><span class="comments">*date     2010.4.2</span><br />
 			<span class="space"/><span class="comments">*/</span><br />
 			Boy name = <span class="keyword">Mr</span> LAI<br />
 			Girl name = <span class="keyword">Mrs</span> DING<br />
@@ -60,7 +61,7 @@
 					<div id="elapseClock"></div>
 				</div>
 				<div id="loveu">
-					认识你，是我的荣幸，非常非常开心。<br/>
+					很高兴认识你。<br/>
 					<div class="signature">- xiaoxiao</div>
 				</div>
 			</div>
@@ -69,6 +70,23 @@
 </div>
 </body>
 <script type="text/javascript">
+function audioAutoPlay(id){
+    var audio = document.getElementById(id),
+            play = function(){
+                audio.play();
+                document.removeEventListener("touchstart",play, false);
+            };
+    audio.play();
+    document.addEventListener("WeixinJSBridgeReady", function () {//微信
+        play();
+    }, false);
+    document.addEventListener('YixinJSBridgeReady', function() {//易信
+        play();
+    }, false);
+    document.addEventListener("touchstart",play, false);
+}
+audioAutoPlay('Jaudio');
+
 var offsetX = $("#loveHeart").width() / 2;
 var offsetY = $("#loveHeart").height() / 2 - 55;
 var together = new Date();
