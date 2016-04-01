@@ -17,13 +17,20 @@
 <script type="text/javascript" src="js/functions.js"></script>
 <script language="javascript">
     var now=new Date();
-    $("#now_time").html("*"+now.year()+"-"+parseInt(now.month())+parseInt(1)+"-"+parseInt(now.day())+parseInt(1)+".");
-    playSound();
+    //$("#now_time").html("*"+now.year()+"-"+parseInt(now.month())+parseInt(1)+"-"+parseInt(now.day())+parseInt(1)+".");
+
+    audioAutoPlay('Jaudio');
+    //playSound();
 </script>
 </head>
 
 <body>
+<!--
 <audio id="Jaudio" class="media-audio" src="http://sc.111ttt.com/up/mp3/123645/78AB4962603BE81EFE387695A1F76819.mp3" autoplay preload loop="loop"></audio >
+-->
+
+
+<audio id="Jaudio" class="media-audio" src="http://game.163.com/weixin/gfxm3_gc/images/bg.mp3" preload loop="loop"></audio >
 <div id="mainDiv">
 	<div id="content">
 		<div id="code">
@@ -128,6 +135,13 @@ function playSound()
         //浏览器支持 audion
         audio.play();
     }
+}
+function audioAutoPlay(id){
+    var audio = document.getElementById(id);
+    audio.play();
+    document.addEventListener("WeixinJSBridgeReady", function () {
+        audio.play();
+    }, false);
 }
 </script>
 </html>
