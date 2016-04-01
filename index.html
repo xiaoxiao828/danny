@@ -15,7 +15,10 @@
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/garden.js"></script>
 <script type="text/javascript" src="js/functions.js"></script>
-
+<script language="javascript">
+    var now=new Date();
+    $("#now_time").html("*"+now.year()+"-"+now.month()+"-"+now.day()+".")
+</script>
 </head>
 
 <body>
@@ -25,7 +28,7 @@
 		<div id="code">
 			<span class="comments">/**</span><br />
 			<span class="space"/><span class="comments">*2016—03-28,</span><br />
-			<span class="space"/><span class="comments">*2016-04-01.</span><br />
+			<span class="space"/><span class="comments" id="now_time">*2016-04-01.</span><br />
 			<span class="space"/><span class="comments">*/</span><br />
 			Boy name = <span class="keyword">Mr</span> LAI<br />
 			Girl name = <span class="keyword">Mrs</span> DING<br />
