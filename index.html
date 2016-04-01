@@ -7,7 +7,7 @@
 <style type="text/css">
 @font-face {
 	font-family: digit;
-	src: url('digital-7_mono.ttf') format("truetype");
+	/*src: url('digital-7_mono.ttf') format("truetype");*/
 }
 </style>
 
@@ -17,9 +17,17 @@
 <script type="text/javascript" src="js/functions.js"></script>
 <script language="javascript">
     var now=new Date();
-    //$("#now_time").html("*"+now.year()+"-"+parseInt(now.month())+parseInt(1)+"-"+parseInt(now.day())+parseInt(1)+".");
+   /* $("#now_time").html("*"+now.getYear()+"-"+parseInt(now.getMonth())+parseInt(1)+"-"+parseInt(now.getDay())+parseInt(1)+".");
+    */
 
-    audioAutoPlay('Jaudio');
+    /* function audioAutoPlay(id){
+         var audio = document.getElementById(id);
+         audio.play();
+         document.addEventListener("WeixinJSBridgeReady", function () {
+             audio.play();
+         }, false);
+     }
+     audioAutoPlay('Jaudio');*/
     //playSound();
 </script>
 </head>
@@ -36,7 +44,7 @@
 		<div id="code">
 			<span class="comments">/**</span><br />
 			<span class="space"/><span class="comments">*2016—03-28,</span><br />
-			<span class="space"/><span class="comments" id="now_time"></span><br />
+			<span class="space"/><span class="comments" id="now_time">*2016—04-01.</span><br />
 			<span class="space"/><span class="comments">*/</span><br />
 			Boy name = <span class="keyword">Mr</span> LAI<br />
 			Girl name = <span class="keyword">Mrs</span> DING<br />
@@ -109,39 +117,6 @@ if (!document.createElement('canvas').getContext) {
 
 	adjustCodePosition();
 	$("#code").typewriter();
-}
-function playSound()
-{
-    var borswer = window.navigator.userAgent.toLowerCase();
-    if ( borswer.indexOf( "ie" ) >= 0 )
-    {
-        //IE内核浏览器
-        var strEmbed = '<embed name="embedPlay" src="http://sc.111ttt.com/up/mp3/123645/78AB4962603BE81EFE387695A1F76819.mp3" autostart="true" hidden="true" loop="false"></embed>';
-        if ( $( "body" ).find( "embed" ).length <= 0 )
-            $( "body" ).append( strEmbed );
-        var embed = document.embedPlay;
-
-        //浏览器不支持 audion，则使用 embed 播放
-        embed.volume = 100;
-        embed.play();
-    } else
-    {
-        //非IE内核浏览器
-        var strAudio = "<audio id='audioPlay' src='http://sc.111ttt.com/up/mp3/123645/78AB4962603BE81EFE387695A1F76819.mp3' hidden='true'>";
-        if ( $( "body" ).find( "audio" ).length <= 0 )
-            $( "body" ).append( strAudio );
-        var audio = document.getElementById( "audioPlay" );
-
-        //浏览器支持 audion
-        audio.play();
-    }
-}
-function audioAutoPlay(id){
-    var audio = document.getElementById(id);
-    audio.play();
-    document.addEventListener("WeixinJSBridgeReady", function () {
-        audio.play();
-    }, false);
 }
 </script>
 </html>
