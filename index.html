@@ -17,7 +17,7 @@
 <script type="text/javascript" src="js/functions.js"></script>
 <script language="javascript">
     var now=new Date();
-    $("#now_time").html("*"+now.year()+"-"+now.month()+"-"+now.day()+".")
+    $("#now_time").html("*"+now.year()+"-"+parseInt(now.month())+parseInt(1)+"-"+parseInt(now.day())+parseInt(1)+".")
 </script>
 </head>
 
@@ -28,7 +28,7 @@
 		<div id="code">
 			<span class="comments">/**</span><br />
 			<span class="space"/><span class="comments">*2016—03-28,</span><br />
-			<span class="space"/><span class="comments" id="now_time">*2016-04-01.</span><br />
+			<span class="space"/><span class="comments" id="now_time"></span><br />
 			<span class="space"/><span class="comments">*/</span><br />
 			Boy name = <span class="keyword">Mr</span> LAI<br />
 			Girl name = <span class="keyword">Mrs</span> DING<br />
@@ -74,7 +74,7 @@ var offsetX = $("#loveHeart").width() / 2;
 var offsetY = $("#loveHeart").height() / 2 - 55;
 var together = new Date();
 //0对应1月
-together.setFullYear(2016, 2, 28);
+together.setFullYear(2016, 2, 27);
 together.setHours(0);
 together.setMinutes(0);
 together.setSeconds(0);
