@@ -4,10 +4,12 @@ var clientWidth = $(window).width();
 var clientHeight = $(window).height();
 
 $(function () {
-    // setup garden
+    // setup garden  建立图形的中心点
+    debugger;
 	$loveHeart = $("#loveHeart");
 	var offsetX = $loveHeart.width() / 2;
 	var offsetY = $loveHeart.height() / 2 - 55;
+
     $garden = $("#garden");
     gardenCanvas = $garden[0];
 	gardenCanvas.width = $("#loveHeart").width();
@@ -35,6 +37,10 @@ $(window).resize(function() {
     }
 });
 
+/**
+ * 根据长度勾画出心得坐标
+ *
+ * */
 function getHeartPoint(angle) {
 	var t = angle / Math.PI;
 	var x = 19.5 * (16 * Math.pow(Math.sin(t), 3));
@@ -43,7 +49,7 @@ function getHeartPoint(angle) {
 }
 
 function startHeartAnimation() {
-	var interval = 50;
+	var interval = 520;
 	var angle = 10;
 	var heart = new Array();
 	var animationTimer = setInterval(function () {
@@ -92,6 +98,10 @@ function startHeartAnimation() {
 	};
 })(jQuery);
 
+/**
+ * 倒计时函数，计算当前时间与开始时间之间的差值
+ *
+ * */
 function timeElapse(date){
 	var current = Date();
 	var seconds = (Date.parse(current) - Date.parse(date)) / 1000;
