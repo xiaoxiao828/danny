@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>canvas酷炫烟花效果</title>
+	<style>
+		/* basic styles for black background and crosshair cursor */
+		body {
+			background: #000;
+			margin: 0;
+		}
+
+		canvas {
+			cursor: crosshair;
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<!-- setup our canvas element -->
+    <audio id="Jaudio" class="media-audio" src="music/missyou.mp3" autoplay preload loop="loop"></audio >
+	<canvas id="canvas">Canvas is not supported in your browser.</canvas>
+</body>
+<script type="text/javascript" src="./js/canvas-fireworks.js"></script>
+<script type="text/javascript">
+    function audioAutoPlay(id){
+        var audio = document.getElementById(id),
+                play = function(){
+                    audio.play();
+                    document.removeEventListener("touchstart",play, false);
+                };
+        audio.play();
+        document.addEventListener("WeixinJSBridgeReady", function () {//微信
+            play();
+        }, false);
+        document.addEventListener('YixinJSBridgeReady', function() {//易信
+            play();
+        }, false);
+        document.addEventListener("touchstart",play, false);
+    }
+    audioAutoPlay('Jaudio');
+</script>
+</html>

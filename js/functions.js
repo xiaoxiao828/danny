@@ -6,7 +6,7 @@ var clientHeight = $(window).height();
 $(function () {
     // setup garden  建立图形的中心点
     debugger;
-	$loveHeart = $("#loveHeart");
+	/*$loveHeart = $("#loveHeart");
 	var offsetX = $loveHeart.width() / 2;
 	var offsetY = $loveHeart.height() / 2 - 55;
 
@@ -16,17 +16,17 @@ $(function () {
     gardenCanvas.height = $("#loveHeart").height()
     gardenCtx = gardenCanvas.getContext("2d");
     gardenCtx.globalCompositeOperation = "lighter";
-    garden = new Garden(gardenCtx, gardenCanvas);
+    garden = new Garden(gardenCtx, gardenCanvas);*/
 	
-	$("#content").css("width", $loveHeart.width() + $("#code").width());
+	/*$("#content").css("width", $loveHeart.width() + $("#code").width());
 	$("#content").css("height", Math.max($loveHeart.height(), $("#code").height()));
 	$("#content").css("margin-top", Math.max(($window.height() - $("#content").height()) / 2, 10));
-	$("#content").css("margin-left", Math.max(($window.width() - $("#content").width()) / 2, 10));
+	$("#content").css("margin-left", Math.max(($window.width() - $("#content").width()) / 2, 10));*/
 
     // renderLoop
-    setInterval(function () {
+    /*setInterval(function () {
         garden.render();
-    }, Garden.options.growSpeed);
+    }, Garden.options.growSpeed);*/
 });
 
 $(window).resize(function() {
@@ -133,12 +133,12 @@ function showMessages() {
 
 function adjustWordsPosition() {
 	$('#words').css("position", "absolute");
-	$('#words').css("top", $("#garden").position().top + 195);
-	$('#words').css("left", $("#garden").position().left + 70);
+	/*$('#words').css("top", $("#garden").position().top + 195);
+	$('#words').css("left", $("#garden").position().left + 70);*/
 }
 
 function adjustCodePosition() {
-	$('#code').css("margin-top", ($("#garden").height() - $("#code").height()) / 2);
+	//$('#code').css("margin-top", ($("#garden").height() - $("#code").height()) / 2);
 }
 
 function showLoveU() {
