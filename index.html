@@ -2,15 +2,25 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Hi,Ding</title>
+<title>Sorry, DY</title>
 
-<style type="text/css">
+    <link href="css/default.css" type="text/css" rel="stylesheet">
+
+    <style type="text/css">
 @font-face {
 	font-family: digit;
 }
+body {
+    background: #000;
+    margin: 0;
+}
+
+canvas {
+    cursor: crosshair;
+    display: block;
+}
 </style>
 
-<link href="css/default.css" type="text/css" rel="stylesheet">
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/garden.js"></script>
 <script type="text/javascript" src="js/functions.js"></script>
@@ -20,58 +30,44 @@
 </head>
 
 <body>
+<img style="display:none;" src="http://imgsrc.baidu.com/forum/pic/item/4e61ada1cd11728bbeb5a1c7c8fcc3cec2fd2c18.jpg"/>
 <!--<embed src="music/shiwo.mp3"  width="0" height="0" type=audio/mpeg loop="true" autostart="true">-->
-<audio id="Jaudio" class="media-audio" src="music/shiwo.mp3" autoplay preload loop="loop"></audio >
+<audio id="Jaudio" class="media-audio" src="music/missyou.mp3" autoplay preload loop="loop"></audio >
 <div id="mainDiv">
 	<div id="content">
-		<div id="code">
-			<span class="comments">/**</span><br />
-            <span class="space"/><span class="comments">*decribe  Nice to meet you</span><br />
-            <span class="space"/><span class="comments">*version  1.0</span><br />
-			<span class="space"/><span class="comments">*date   2010.4.2</span><br />
-			<span class="space"/><span class="comments">*/</span><br />
-			Boy name = <span class="keyword">Mr</span> XIAO<br />
-			Girl name = <span class="keyword">Mrs</span> DING<br />
-			<span class="comments">// meet you. </span><br />
-            First saw your photo, feeling very good;<br />
-			<span class="comments">// add you.</span><br />
-            Big eyes, high forehead, so I want to know you;<br />
-            <span class="comments">// talking</span><br />
-            ......<br/>
-            <span class="comments">// after talk.</span><br />
-            Gentle and quiet girl, my impression of you;<br />
-			<span class="comments">// talk end</span><br />
-            Your character is very good, I see;<br />
-            <br>
-            <br>
-            <span class="comments">// see this</span><br />
-            The brightest star in the night sky can hear <span class="keyword">still</span><br/>
-            The brightest star in the night sky can remember <span class="keyword">still</span><br/>
-            Once with <span class="keyword">us</span> colleagues disappeared in the wind shadow<br/>
-            No tears, no lies<br/>
-            When the sun rises, <span class="keyword">looking forward to</span> you out of the darkness of night<br/>
-			<span class="comments">// I can give you.</span><br />
-			<br>
-			<br>
-			I want to say:<br />
-			Ding, It is necessary for us to know each other;<br />
-		</div>
-		<div id="loveHeart">
-			<canvas id="garden"></canvas>
-			<div id="words">
-				<div id="messages">
-                    <font color="##f0ffff">亲爱的朋友，这是我们认识的时光。</font>
-					<div id="elapseClock"></div>
-				</div>
-				<div id="loveu">
-                    <font color="#FFCCCC">很高兴认识你。</font><br/>
-					<div class="signature">- xiaoxiao</div>
-				</div>
-			</div>
-		</div>
+        <div id="words">
+            <div id="messages">
+                <font color="##f0ffff">小白兔，这是我们认识的时光。</font>
+                <div id="elapseClock"></div>
+            </div>
+            <div id="loveu">
+                <font color="#FFCCCC" style="margin:20px auto;text-align:center;">
+                    <pre>
+                      ((`'-"` `""-'`))
+                    　　 )　-　　-　 (
+                    　　/　 (o _ o) 　\
+                    　　\　　( 0 )　　/
+                    　_'-.._　'='　_..-'_
+                    /`;#'#'#.　-.　#'#'#;`\
+                    \_))　　　'#'　　　((_/
+                    #.　　 ☆　☆　☆　　 .#
+                    '#.　　  爱你!　　.#'
+                    　/'#.　　　　　 .#'\
+                    　 _\\'#.　　　.#'//_
+                    　　 (((___)'#'(___
+                        </pre>
+                </font><br/>
+                <font color="#FFCCCC">亲爱的，请你原谅</font><br/>
+                <font color="#FFCCCC">以后的路还很长,我会找好对你的</font><br/>
+                <div class="signature">- xiao</div>
+            </div>
+        </div>
+        <canvas id="canvas">
+        </canvas>
 	</div>
 </div>
 </body>
+<script type="text/javascript" src="js/canvas-fireworks.js"></script>
 <script type="text/javascript">
 function audioAutoPlay(id){
     var audio = document.getElementById(id),
@@ -90,37 +86,21 @@ function audioAutoPlay(id){
 }
 audioAutoPlay('Jaudio');
 
-var offsetX = $("#loveHeart").width() / 2;
-var offsetY = $("#loveHeart").height() / 2 - 55;
+
 var together = new Date();
 //0对应1月
-together.setFullYear(2016, 2, 27);
+together.setFullYear(2016, 9, 16);
 together.setHours(0);
 together.setMinutes(0);
 together.setSeconds(0);
 together.setMilliseconds(0);
 
-if (!document.createElement('canvas').getContext) {
-	var msg = document.createElement("div");
-	msg.id = "errorMsg";
-	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
-	document.body.appendChild(msg);
-	$("#code").css("display", "none")
-	$("#copyright").css("position", "absolute");
-	$("#copyright").css("bottom", "10px");
-	document.execCommand("stop");
-} else {
-	setTimeout(function () {
-		startHeartAnimation();
-	}, 5000);
 
-	timeElapse(together);
-	setInterval(function () {
-		timeElapse(together);
-	}, 500);
+timeElapse(together);
+setInterval(function () {
+    timeElapse(together);
+}, 500);
+showMessages();
 
-	//adjustCodePosition();
-	$("#code").typewriter();
-}
 </script>
 </html>
