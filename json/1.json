@@ -1,0 +1,15 @@
+{
+    "data": {
+        "cityid": 440300,
+        "cityname": "深圳",
+        "counties": [],
+        "isopen": 0,
+        "mappingurl": "https://h5.youzan.com/v2/feature/qu57ansr",
+        "provincename": "广东省"
+    },
+    "meta": {
+        "code": "00000",
+        "msg": "ok",
+        "success": true
+    }
+}

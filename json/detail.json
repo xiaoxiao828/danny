@@ -1,0 +1,30 @@
+{
+    "data": {
+	    "深圳": {
+            "cityid": 110101,
+            "cityname": "深圳",
+            "counties": [],
+            "isopen": 0,
+            "mappingurl": "https://h5.youzan.com/v2/feature/ayluvjbu"
+        },
+        "北京": {
+            "cityid": 110100,
+            "cityname": "北京",
+            "counties": [],
+            "isopen": 0,
+            "mappingurl": "https://h5.youzan.com/v2/feature/ayluvjbu"
+        },
+        "上海": {
+            "cityid": 310100,
+            "cityname": "上海",
+            "counties": [],
+            "isopen": 0,
+            "mappingurl": "https://h5.youzan.com/v2/feature/1c8h1855j"
+        }
+    },
+    "meta": {
+        "code": "00000",
+        "msg": "ok",
+        "success": true
+    }
+}

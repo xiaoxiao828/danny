@@ -1,0 +1,39 @@
+{
+    "data": [
+        {
+            "cityId": 440300,
+            "cityName": "深圳",
+            "mappingUrl": "https://h5.youzan.com/v2/feature/qu57ansr"
+        },
+        {
+            "cityId": 440100,
+            "cityName": "广州",
+            "mappingUrl": "https://h5.youzan.com/v2/feature/lq6zxih4"
+        },
+        {
+            "cityId": 310100,
+            "cityName": "上海",
+            "mappingUrl": "https://h5.youzan.com/v2/feature/1c8h1855j"
+        },
+        {
+            "cityId": 110100,
+            "cityName": "北京",
+            "mappingUrl": "https://h5.youzan.com/v2/feature/ayluvjbu"
+        },
+        {
+            "cityId": 120100,
+            "cityName": "天津",
+            "mappingUrl": "https://h5.youzan.com/v2/feature/wn6b60ie"
+        },
+        {
+            "cityId": 500100,
+            "cityName": "重庆",
+            "mappingUrl": "https://h5.youzan.com/v2/feature/10a0uzxnd"
+        }
+    ],
+    "meta": {
+        "code": "00000",
+        "msg": "ok",
+        "success": true
+    }
+}
