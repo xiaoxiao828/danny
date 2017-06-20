@@ -3981,7 +3981,7 @@ function(t) {
 					var e = $(".ui-locationCity"),
 						i = $("#fn-provinceCmp"),
 						n = $("#fn-cityCmp");
-					t ? (e.data("mappingurl", (t.data || {}).mappingurl).data("isopen", (t.data || {}).isopen).data("cityid", (t.data || {}).cityid).html((t.data || {}).cityname), i.html((t.data || {}).provincename), n.data("mappingurl", (t.data || {}).mappingurl).data("isopen", (t.data || {}).isopen).data("cityid", (t.data || {}).cityid).html((t.data || {}).cityname)) : 
+					t ? (e.data("mappingurl", (t || {}).mappingurl).data("isopen", (t || {}).isopen).data("cityid", (t || {}).cityid).html((t || {}).cityname), i.html((t || {}).provincename), n.data("mappingurl", (t || {}).mappingurl).data("isopen", (t || {}).isopen).data("cityid", (t || {}).cityid).html((t || {}).cityname)) :
 					(e.data("mappingurl", b.mappingUrl).data("isopen", b.isOpen).data("cityid", b.cityId).html(b.cityName), i.html(b.provinceName), n.data("mappingurl", b.mappingUrl).data("isopen", b.isOpen).data("cityid", b.cityId).html(b.cityName)), c()
 				}
 				function f(t) {
