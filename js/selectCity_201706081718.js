@@ -3976,6 +3976,7 @@ function(t) {
 					}, !1)
 				}
 				function p(t) {
+					debugger;
 					//设置筛选框
 					var e = $(".ui-locationCity"),
 						i = $("#fn-provinceCmp"),
