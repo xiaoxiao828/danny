@@ -3823,6 +3823,7 @@ function(t) {
 					})
 				}
 				function l(t) {
+					debugger;
 					//获取城市相关配置信息
 					g();
 					var e = {
@@ -3836,6 +3837,7 @@ function(t) {
 						contentType: "application/json",
 						//data: e,
 						success: function(t) {
+                            debugger;
 							v();
 							if(null != t && null != t.data) {
 								for (var o in t.data){
