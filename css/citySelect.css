@@ -216,7 +216,7 @@ a {
 
 .ui-header {
 	text-align: center;
-	margin: 40% auto 2em auto
+	margin: 36% auto 1em auto
 }
 
 .ui-tip {
@@ -230,11 +230,12 @@ a {
 	line-height: 1.3em;
 	width: 50%;
 	margin: 0 auto;
-	overflow: hidden
+	overflow: hidden;
+    color: #e9c060
 }
 
 .ui-selectCity {
-	margin-top: 2em;
+	margin-top: 1em;
 	text-align: center
 }
 
