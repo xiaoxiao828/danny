@@ -3786,6 +3786,7 @@ function(t) {
 				function o() {
 					try {
 						//定义获取经纬度
+						alert("111");
 						var t = new BMap.Geolocation;
 						t.getCurrentPosition(function(t) {
 							0 == this.getStatus() ? a(t.point.lng, t.point.lat) : r()
@@ -3808,14 +3809,16 @@ function(t) {
 					})
 				}
 				function r() {
+                    alert("222");
 					//热门城市获取
 					g(), $.ajax({
 						type: "GET",
-						url: i.URL + "/city/autoPositionCity",
+						//url: i.URL + "/city/autoPositionCity",
+                        url: "json/autoPositionCity.json",
 						dataType: "json",
 						contentType: "application/json",
 						success: function(t) {
-							v(), null != t && null != t.data ? p(t) : p()
+							v(), null != t && null != t.data ? p(t.data) : p()
 						},
 						error: function() {
 							v(), p()
